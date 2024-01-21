@@ -1,0 +1,173 @@
+/*
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 700
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-family: 'Inter', sans-serif;
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
+    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+*/
+* {
+    box-sizing: border-box;
+}
+:root {
+    --Very-dark-blue-main-background: hsl(233, 47%, 7%);
+    --Dark-desaturated-blue-card-background: hsl(244, 38%, 16%);
+    --Soft-violet-accent: hsl(277, 64%, 61%);
+    --White-mainheadingstats: hsl(0, 0%, 100%);
+    --Slightly-transparent-whitemain-paragraph: hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-white-stat-headings: hsla(0, 0%, 100%, 0.6);
+    --font-size:15px ;
+    --font-family-Lexend-Deca: 'Lexend Deca', sans-serif;
+    --font-family-Inter: 'Inter', sans-serif;
+}
+body {
+    background-color: var(--Very-dark-blue-main-background);
+}
+.card {
+    display: flex;
+    border-radius: 15px;
+    gap: 33px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 937px;
+    height: 410px;
+    background-color: var(--Dark-desaturated-blue-card-background);
+    overflow: hidden;
+}
+.card .content {
+    flex-basis: 60%;
+    padding: 25px;
+}
+.card .content .text .head {
+    font-size: 31px;    
+    word-wrap: break-word;
+    font-family: var(--font-family-Inter);
+    font-weight: 700;
+    color: var(--White-mainheadingstats);
+    line-height: 1.3;
+}
+.card .content .text .head span {
+    color: var(--Soft-violet-accent);
+}
+.card .content .text .stats {
+    font-size: 14px;
+    color: var(--Slightly-transparent-white-stat-headings);
+    font-family: var(--font-family-Inter);
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    letter-spacing: 1.3px;
+}
+.pho {
+    position: relative;
+}
+.pho::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%,-50%);
+    background-color: hsl(278.81deg 97.11% 46.58% / 88%);
+    opacity: .45554555;
+    filter: brightness(1.2);
+    z-index: 0;
+}
+.pho::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%,-50%);
+    background-color: var(--Slightly-transparent-white-stat-headings);
+    opacity: 0.5;
+    z-index: 1;
+    filter: brightness(0.1);
+}
+img  {
+    width: 500px;
+}
+.foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.foot .comp {
+    position: relative;
+    padding: 15px 15px 15px 0px;
+} 
+.foot .comp .top {
+    color: var(--White-mainheadingstats);
+    font-family: var(--font-family-Inter);
+    font-weight: 900;
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+} 
+.foot .comp .bottom {
+    display: block;
+    font-family: var(--font-family-Inter);
+    font-weight: 700;
+    color: var(--Slightly-transparent-white-stat-headings);
+    text-transform: uppercase;
+    font-size: 11px;
+    position: absolute;
+    margin-top: 4px;
+    letter-spacing: 1.3px;
+} 
+@media (max-width:420px) {
+    .card {
+        flex-direction: column-reverse;
+        width: 311px;
+        height: 700px;
+        gap: 5px;
+    }
+    .card .content {
+        padding: 0px;
+    }
+    .card .content .text .head {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .card .content .text .stats { 
+        text-align: center;
+        margin-top: 20px;
+        padding: 0 25px 0 25px;
+        margin-bottom: 20px;
+    }
+    .foot {
+        flex-direction: column; 
+    }
+    .foot .comp {
+        padding: 10px;
+        margin-bottom: 15px;
+        position: relative;
+    }
+    .foot  .comp .top {
+        font-size: 15px;
+    }
+    .foot  .comp .bottom {
+        margin-top: 10px;
+        letter-spacing: 1.3px;
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-43%, 66%);
+        font-size: 7px;
+}
+    img {
+        width: 310px;
+        height: 250px;
+        }
+}
